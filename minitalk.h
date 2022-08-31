@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 14:27:11 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/08/29 15:29:57 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:43:48 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <limits.h>
 # include <string.h>
+
+# define BUFFER_SIZE 1000000
 
 void	ft_putnbr_fd(long int n, int fd);
 void	*my_malloc(size_t size);

@@ -6,16 +6,19 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 15:46:04 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/08/29 16:39:30 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:43:49 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
+#include <stdio.h>
 
 void	my_handler(int signum)
 {
-	static char	vault[8] = {0};
-	static int	i = 0;
+	static	char	vault[8] = {0};
+	static	int	i = 0;
+	static	char buffer[BUFFER_SIZE] = {0};
+	static	int	char_count = 0;
 
 	if (signum == SIGUSR1)
 		vault[i] = '0';
@@ -24,7 +27,15 @@ void	my_handler(int signum)
 	i++;
 	if (i == CHAR_BIT)
 	{
-		ft_putchar_fd(binary_to_char(vault), 1);
+		buffer[char_count] = binary_to_char(vault);
+		if (buffer[char_count] == '\0' || char_count == BUFFER_SIZE - 2)
+			{
+				printf("%s\n", buffer);
+				char_count = 0;
+				memset(buffer, 0, BUFFER_SIZE);
+			}
+		else
+			char_count++;
 		memset(vault, 0, CHAR_BIT);
 		i = 0;
 	}

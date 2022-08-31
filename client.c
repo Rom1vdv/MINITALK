@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:32:44 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/08/31 11:16:17 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:43:38 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ void	ft_send_data(int pid, char *payload)
 	int		j;
 	char	*binary;
 
-	while (*payload)
+	j = 0;
+	while (!j || payload[-1])
 	{
 		j = 0;
 		binary = char_to_binary(*payload);
@@ -36,7 +37,7 @@ void	ft_send_data(int pid, char *payload)
 					ft_error("Kill failed, leaving process.");
 			}
 			j++;
-			usleep(200);
+			usleep(50);
 		}
 		payload++;
 	}
