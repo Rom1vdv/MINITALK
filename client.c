@@ -6,13 +6,11 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 13:32:44 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/08/31 14:43:38 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:11:25 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-
-#include <stdio.h>
 
 void	ft_send_data(int pid, char *payload)
 {
@@ -50,7 +48,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 3)
 	{
-		pid = atoi(argv[1]);
+		pid = ft_atoi(argv[1]);
 		payload = argv[2];
 		ft_send_data(pid, payload);
 	}

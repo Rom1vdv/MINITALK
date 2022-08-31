@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 14:27:11 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/08/31 14:43:48 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:12:33 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ char	*char_to_binary(unsigned char character);
 char	binary_to_char(char *binary);
 void	ft_putchar_fd(char c, int fd);
 void	ft_error(char *str);
+size_t	ft_strlen(const char *str);
+void	*ft_memset(void *str, int c, size_t len);
+int		ft_atoi(const char *str);
 
 #endif

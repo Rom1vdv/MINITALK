@@ -6,7 +6,7 @@
 #    By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 18:23:44 by romvan-d          #+#    #+#              #
-#    Updated: 2022/08/29 16:41:39 by romvan-d         ###   ########.fr        #
+#    Updated: 2022/08/31 15:13:00 by romvan-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ CLIENT = client
 
 SERVER = server
 
-CLIENT_SRCS = utils.c utils2.c client.c
+CLIENT_SRCS = utils.c utils2.c client.c ft_atoi.c
 
-SERVER_SRCS = utils.c utils2.c server.c
+SERVER_SRCS = utils.c utils2.c server.c ft_atoi.c
 
 CLIENT_OBJS = ${CLIENT_SRCS:.c=.o}
 SERVER_OBJS = ${SERVER_SRCS:.c=.o}

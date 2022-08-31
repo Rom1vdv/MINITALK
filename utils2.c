@@ -6,7 +6,7 @@
 /*   By: romvan-d <romvan-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 11:43:00 by romvan-d          #+#    #+#             */
-/*   Updated: 2022/08/31 14:43:50 by romvan-d         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:07:34 by romvan-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,14 @@ void	ft_error(char *str)
 {
 	ft_putstr_fd(str, 2);
 	exit(EXIT_FAILURE);
+}
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
